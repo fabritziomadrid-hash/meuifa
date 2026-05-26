@@ -39,3 +39,39 @@ body, html {
     margin-bottom: 1%;
 }
 
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50%, 100% {
+        width: 100%; /* Expande o tamanho até preencher todo o texto */
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.gradient-text {
+  font-family: Garamond;
+  font-size: 30px;
+  color: #440505;
+  background: linear-gradient(97.54deg, black 20%, yellow 15%, blue 20%, #110003 25%, darkred 30%, rgb(2, 66, 15) 35%);
+  background-size: 400%; /* Aumenta o tamanho do fundo para animar */
+  -webkit-background-clip: text; /* Recorta o fundo no formato do texto */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Torna a cor original transparente */
+  animation: degrade-animation 15s ease infinite; /* Animação */
+margin-bottom: 0%;
+margin-top: 1vw;
+}
+
+@keyframes degrade-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
