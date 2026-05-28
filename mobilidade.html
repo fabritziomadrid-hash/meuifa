@@ -299,10 +299,24 @@
 </div>
 
 
+<script>
+const botaoFullscreen = document.getElementById('btn-fullscreen');
+const carrosselSecao = document.querySelector('.carrossel');
+
+botaoFullscreen.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+        // Entra em tela cheia
+        carrosselSecao.requestFullscreen().catch(err => {
+            console.error(`Erro ao tentar abrir em tela cheia: ${err.message}`);
+        });
+    } else {
+        // Sai da tela cheia
+        document.exitFullscreen();
+    }
+});
 
 
-
-
+</script>
 
 
     
