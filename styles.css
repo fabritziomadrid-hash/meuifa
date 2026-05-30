@@ -20,7 +20,7 @@
 }
 
 body, html {
-    background: linear-gradient(to bottom, #eea3a3 0%,#490606 100%);
+    background-color: aquamarine;
     font-family: var(--fonte-principal);
     font-size: 16px;
     font-weight: 400;
@@ -73,5 +73,3 @@ margin-top: 1vw;
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
-
