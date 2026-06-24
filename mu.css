@@ -1,11 +1,10 @@
-@import url("style/header1.css");
-@import url("style/banner1.css");
-@import url("style/carrossel1.css");
-@import url("style/topicos1.css");
-@import url("style/contato1.css");
-@import url("style/rodapé1.css");
-@import url("style/conteudo1.css");
-
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrossel.css");
+@import url("styles/topicos.css");
+@import url("styles/contato.css");
+@import url("styles/rodapé.css");
+@import url("stylemu/conteudo.css");
 
 :root {
     --cor-de-fundo: #EBECEE;
@@ -30,7 +29,7 @@ body, html {
 
 .titulo-digitando {
     font-family: monospace;
-    font-size: 5vw;
+    font-size: 3vw;
     color: var(--vermelho); 
     overflow: hidden;
     white-space: nowrap;
@@ -78,4 +77,50 @@ width: 100%;
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+.cabeçalho {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+
+var.vector { 
+    font-style: normal; 
+}
+var.vector span { 
+    margin-left: -1.5em; /* Puxa a seta para cima da letra */
+    vertical-align: 1em; /* Ajusta a altura da seta */
+    font-size: 0.6em; /* Deixa a seta um pouco menor que a letra */
+}
+
+
+
+.tabela-equacao {
+  width: 98vw;
+  border-collapse: collapse;
+  font-family: Garamond;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.tabela-equacao th, 
+.tabela-equacao td {
+    font-size: 4vw;
+  padding: 3px 2px;
+  /* Remove as bordas verticais e mantém apenas a linha inferior */
+  border-bottom: 1px solid #dddddd;
+  border-left: none;
+  border-right: none;
+}
+
+.tabela-equacao th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333333;
+}
+
+.tabela-equacao tbody tr:hover {
+  background-color: #f9f9f9;
 }

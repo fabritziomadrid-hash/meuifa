@@ -12,10 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mu.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     
 </head>
 
 <body> <!--CORPO DA PÁGINA INICIAL-->
@@ -87,163 +88,141 @@
     
     </header>  <!--FIM DO CABEÇALHO-->
 
-
     
-   <section class="banner"> <!--Primeiro Espaço editável da página inicial- UMA SECTION, UMA REGIÃO VISUAL NA HOME PAGE-->
+    <section class="banner"> <!--Primeiro Espaço editável da página inicial- UMA SECTION, UMA REGIÃO VISUAL NA HOME PAGE-->
         <div class="banner-container">
-             <h1 class="titulo-digitando"> A C E S S I B I L I D A D E</h1>
+             <h1 class="titulo-digitando"> M O V I M E N T O - U N I F O R M E</h1>
         </div>
     </section>
 
 
-                <!--INÍCIO DO CARROSSEL DE IMAGENS E CLASS DO CSS-->
- <section class="carrossel"> 
-  <h1 class="carrossel__titulo"> ♿ CONSTRUÇÕES E APRENDIZAGENS ♿  <button id="btn-fullscreen">🖥️ + ou - Tela</button></h1>
+                <!--INÍCIO DO CARROSSEL DE IMAGENS E CLASS DO CSS--><!--FIM DO CARROSSEL-->
 
-  <!-- Adicionamos o id "carrossel-fullscreen" aqui -->
-  <div class="carrossel__container" id="carrossel-fullscreen"> 
-    <div class="swiper"> 
-      <div class="swiper-pagination"></div> 
-      <div class="swiper-wrapper"> 
-        <div class="swiper-slide"><img src="img/git.svg" alt="Comunidade GitHub"></div> 
-        <div class="swiper-slide"><img src="img/git1.svg" alt="Repositórios e publicações"></div> 
-        <div class="swiper-slide"><img src="img/tink.svg" alt="Simuladores de robótica"></div> 
-        <div class="swiper-slide"><img src="img/tink3.svg" alt="Programaçao e publicações"></div> 
-        <div class="swiper-slide"><img src="img/tink.svg" alt="Códigos e simuladores"></div> 
-        <div class="swiper-slide"><img src="img/ifa.svg" alt="Projeto e publicações"></div> 
-        <div class="swiper-slide"><img src="img/vs2.svg" alt="Códigos e simuladores"></div> 
-      </div> 
-      <div class="swiper-button-prev"></div> 
-      <div class="swiper-button-next"></div> 
-    </div> 
-  </div> 
-</section> <!--FIM DO CARROSSEL--><!--FIM DO CARROSSEL-->
+     
 
-    <hr /> <!--LINHA HORIZONTAL DE SEPARAÇÃO-->
+<div class="calc">
+   <h1 class="titulo-digitando"> C A L C U L E: </h1>
+    <div class="containereq">
 
+    <div class="input-group">
+        <label>Nome da Equação:</label>
+        <input type="text" id="nome-equacao" placeholder="Ex: Velocidade Média">
+    </div>
 
+    <div class="input-group">
+        <label>Símb.:</label>
+        <input type="text" id="simbolo-equacao" placeholder="Ex: v">
+    </div>
+        
+        <div class="input-group">
+        <label>Eq:</label>
+        <input type="text" id="equacao" placeholder="Ex: (d / t)" oninput="gerarInputs()">
+    </div>
 
-      <!--JAVA PARA CARROSSEL DE SLIDES DINÂMICO E MANUAL POR SETAS-->
-<script>
-  const swiper = new Swiper('.swiper', {
-    // Configuração da navegação (setas funcionando)
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    <div class="input-group">
+        <label>Unid. Med.:</label>
+        <input type="text" id="unidade-equacao" placeholder="Ex: m/s">
+    </div>
+
     
-    // Paginação (opcional)
-    pagination: {                
-      el: '.swiper-pagination',
-      clickable: true, // Adiciona clicabilidade aos pontos
-    },
 
-    // Configurações para Loop Infinito
-    loop: true, // Habilita o loop
-    slidesPerView: 2, // Quantidade de slides visíveis
-    spaceBetween: 5, // Espaçamento
+    <div id="inputs-container"></div>
+    <button onclick="resolverEquacao()">Calcular</button>        
+    <div class="resultado" id="resultado" style="display:none;"></div>
+</div>
+</div>
+
+
+
+
     
-    // Opcional: Adicionar autoplay para ser automático
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false, // Mantém o autoplay após usar as setas
-    },
-  });
-</script>   <!--FIM DO CÓDIGO JAVA E UTILIZAÇÃO-->
-             
 
 
-         <!--CÓDIGO JAVA PAUSADO, SEM AÇÃO DAS SETAS-->
-<script>
-// Certifique-se de importar o Autoplay se estiver usando módulos
-// import Swiper, { Navigation, Pagination, Autoplay } from 'swiper'; 
-// Swiper.use([Navigation, Pagination, Autoplay]);
 
-//const swiper = new Swiper('.swiper', {
-  // Configuração da navegação
-  //spaceBetween: 5,
-  //slidesPerView: 2, // Pode ser 'auto' para slides dinâmicos
-  
-  //navigation: {
-    //nextEl: '.swiper-button-next',
-    //prevEl: '.swiper-button-prev',
-  //},
-  
-  // Opcionais
-  //pagination: { el: '.swiper-pagination', clickable: true },
 
-  // --- ALTERAÇÕES PARA INFINITO/DINÂMICO ---
-  //loop: true, // Habilita o loop infinito
-  
- // autoplay: {
-   // delay: 0, // 0ms para efeito contínuo (marquee)
-   // disableOnInteraction: false, // Continua mesmo após interagir
- // },
-  
- // speed: 15000, // Velocidade da transição (aumente para ser mais lento)
-  
-  // Opcional: Se quiser que mova suavemente sem parar
-  // freeMode: true, 
-  // freeModeSticky: true, 
-  
-  // --- Garante que o Swiper se atualize ao adicionar itens ---
-  // observer: true,
-  //observeParents: true,
-//});
 
- </script>
+    
 
 <script>
+    let variaveisGlobais = [];
 
-    const carrosselContainer = document.getElementById('carrossel-fullscreen');
+    function gerarInputs() {
+        const equacao = document.getElementById('equacao').value;
+        const container = document.getElementById('inputs-container');
+        container.innerHTML = '';
+        variaveisGlobais = [];
 
-// Executa ao clicar duas vezes no carrossel (evita conflito com arrastar os slides)
-carrosselContainer.addEventListener('dblclick', () => {
-  if (!document.fullscreenElement) {
-    // Entra em tela cheia
-    carrosselContainer.requestFullscreen()
-      .catch(err => console.error(`Erro ao ativar tela cheia: ${err.message}`));
-  } else {
-    // Sai da tela cheia se já estiver nela
-    document.exitFullscreen();
-  }
-});
-
-// Força o Swiper a atualizar o layout após mudar para tela cheia
-document.addEventListener('fullscreenchange', () => {
-  // Substitua "meuSwiper" pela variável onde você instanciou o seu Swiper
-  if (typeof meuSwiper !== 'undefined') {
-    setTimeout(() => meuSwiper.update(), 300); 
-  }
-});
-</script>
-
-<script>
-    const botaoFullscreen = document.getElementById('btn-fullscreen');
-const carrosselSecao = document.querySelector('.carrossel');
-
-botaoFullscreen.addEventListener('click', () => {
-    if (!document.fullscreenElement) {
-        // Solicita a abertura da seção em tela cheia
-        carrosselSecao.requestFullscreen().catch(err => {
-            console.error(`Erro ao tentar abrir tela cheia: ${err.message}`);
-        });
-    } else {
-        // Sai da tela cheia
-        document.exitFullscreen();
+        // Expressão regular para extrair apenas letras
+        const letras = equacao.match(/[a-zA-Z]/g);
+        
+        if (letras) {
+            // Remove duplicatas
+            const variaveisUnicas = [...new Set(letras.map(v => v.toLowerCase()))];
+            
+            variaveisUnicas.forEach(v => {
+                variaveisGlobais.push(v);
+                container.innerHTML += `
+                    <div class="input-group">
+                        <label>Variável <strong>${v.toUpperCase()}</strong>:</label>
+                        <input type="text" id="nome-${v}" placeholder="Nome (ex: Distância)" required>
+                        <input type="text" id="simb-${v}" placeholder="Símbolo (ex: d)" required>
+                        <input type="text" id="unid-${v}" placeholder="Unidade (ex: metros)" required>
+                        <input type="number" id="val-${v}" placeholder="Valor numérico" step="any" required>
+                    </div>
+                `;
+            });
+        }
     }
-});
+
+    function resolverEquacao() {
+        const nomeEq = document.getElementById('nome-equacao').value || "Equação";
+        const simbEq = document.getElementById('simbolo-equacao').value || "";
+        const unidEq = document.getElementById('unidade-equacao').value || "";
+        let equacaoStr = document.getElementById('equacao').value;
+
+        try {
+            // Substitui as letras na equação pelos valores numéricos
+            variaveisGlobais.forEach(v => {
+                const valor = document.getElementById(`val-${v}`).value;
+                if (!valor) throw new Error("Preencha todos os valores!");
+                
+                // Regex global para substituir todas as ocorrências da variável
+                const regex = new RegExp(v, 'gi');
+                equacaoStr = equacaoStr.replace(regex, valor);
+            });
+
+            // Avalia o resultado matemático com segurança
+            const valorResultado = eval(equacaoStr);
+
+            if (isNaN(valorResultado) || !isFinite(valorResultado)) {
+                alert("Equação inválida. Verifique os valores inseridos.");
+                return;
+            }
+
+            // Exibe o resultado com o Nome da Equação, símbolo e unidade
+            const divResultado = document.getElementById('resultado');
+            divResultado.innerHTML = `
+                <strong>${nomeEq} (${simbEq})</strong>: 
+                ${valorResultado.toFixed(2).replace('.', ',')} ${unidEq}
+            `;
+            divResultado.style.display = 'block';
+
+        } catch (error) {
+            alert("Erro ao calcular. Certifique-se de que a equação foi digitada corretamente.");
+        }
+    }
 </script>
 
+    
 
     
     <div class="rodapepadrao"> <!--RODAPÉ-->
-         CRÉDITOS: EquipeAlura/SEED-PR. Autoras e autores de códigos, imagens, sons e demais conhecimentos utilzados e multiplicados neste projeto aberto. Sobretudo, toda gratidão por gentis críticas e generosa motivação creditadas por estimadas e valorosos agradeço o renato
-         <div class="copyright">© Copyright Física Renato Pereira ®ψΣ.</div>
+         CRÉDITOS: EquipeAlura/SEED-PR. Autoras e autores de códigos, imagens, sons e demais conhecimentos utilzados e multiplicados neste projeto aberto. Sobretudo, toda gratidão por gentis críticas e generosa motivação creditadas por estimadas e valorosos estudantes.
+          <div class="copyright">© Copyright Física Renato Pereira ®ψΣ.</div>
           <div class="copyright"> Ed. 00-10/2024. Rev. 01-05/2026.</div>
           </div>
 
     
-</body> <!--FIM DO CORPO DA PAGE-->
+</body> <!--FIM DO CORPO DA FOE PAGE-->
 
 </html> <!--FIM DO CÓDIGO-->
